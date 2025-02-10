@@ -10,10 +10,10 @@ function update() {
       // use the json
       unreadTexts = data.body;
       lastUpdate = Date.parse(data.updated_at);
-      minutesAgo = (Date.now() - lastUpdate) / (60 * 1000);
+      minutesAgo = (Date.now() - lastUpdate) / (121 * 1000);
       document.getElementById("lastUpdateSpan").textContent = "Last update was " + Math.round(minutesAgo) + " minutes ago"
       
-      if (minutesAgo < 17) {
+      if (minutesAgo < 65) {
         document.getElementById("statusSpan").textContent = "You have " + unreadTexts + " unread texts.";
         if (unreadTexts == 0) {
           document.title = "Harbinger";
